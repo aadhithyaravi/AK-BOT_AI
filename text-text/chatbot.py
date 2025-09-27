@@ -1,9 +1,7 @@
-import json
 import random
+from utils import load_json
 
-with open("intents.json", "r") as f:
-    datas = json.load(f)
-
+datas = load_json("intents.json")
 def talk():
     user_input = input("You: ").lower().strip().split()
     best_match = None
